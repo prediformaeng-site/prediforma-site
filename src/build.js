@@ -40,7 +40,7 @@ const h8 = (s) => crypto.createHash('md5').update(s).digest('hex').slice(0, 8);
 const cssName = `site.${h8(css)}.css`, jsName = `site.${h8(js)}.js`;
 write(`css/${cssName}`, css);
 write(`js/${jsName}`, js);
-write('favicon.svg', fs.readFileSync(path.join(vendor, 'favicon.svg')));
+for (const f of ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png', 'icon-192.png']) write(f, fs.readFileSync(path.join(vendor, f)));
 
 // ---------- layout ----------
 function layout(p) {
@@ -56,12 +56,14 @@ function layout(p) {
 <title>${esc(p.title)}</title>
 <meta name="description" content="${esc(p.desc)}">
 <link rel="canonical" href="${url}">
-${MODO.live ? '' : '<meta name="robots" content="noindex, nofollow">\n'}<meta name="theme-color" content="#1F3B67">
+${!MODO.live ? '<meta name="robots" content="noindex, nofollow">\n' : p.noindex ? '<meta name="robots" content="noindex, follow">\n' : ''}<meta name="theme-color" content="#1F3B67">
 <meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta property="og:site_name" content="${SITE.nome}">
 <meta property="og:title" content="${esc(p.title)}"><meta property="og:description" content="${esc(p.desc)}"><meta property="og:url" content="${url}">
 <meta property="og:image" content="${og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin-700-normal.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-400-normal.woff2" crossorigin>
 <link rel="stylesheet" href="/css/${cssName}">
@@ -90,7 +92,7 @@ fs.writeFileSync(path.join(pub, '404.html'), layout(p404).replace('<link rel="ca
 
 // ---------- SEO e Cloudflare Pages ----------
 const hoje = new Date().toISOString().slice(0, 10);
-const urls = paginas.map((p) => `  <url><loc>${SITE.url}${p.path}</loc><lastmod>${hoje}</lastmod></url>`).join('\n');
+const urls = paginas.filter((p) => !p.noindex).map((p) => `  <url><loc>${SITE.url}${p.path}</loc><lastmod>${hoje}</lastmod></url>`).join('\n');
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
 write('robots.txt', MODO.live ? `User-agent: *\nAllow: /\n\nSitemap: ${SITE.url}/sitemap.xml\n` : `# Pré-publicação: bloqueado até o go-live (build com --live).\nUser-agent: *\nDisallow: /\n`);
 const csp = "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'";

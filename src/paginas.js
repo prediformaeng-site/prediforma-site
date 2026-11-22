@@ -57,7 +57,7 @@ SV['pintura-predial'] = {
     section(`<h2>Por que contratar a Prediforma</h2><div class="pf-grid pf-grid--3">
       ${card('capacete', 'Engenheiro civil à frente', 'Jefferson da Silva é engenheiro civil com especialização em patologias das construções, a área que estuda por que os edifícios se deterioram.')}
       ${card('ancora', 'Segurança em altura', 'Equipes com NR-35 e instalação de pontos de ancoragem, com laudo.', ['Pontos de ancoragem', '/servicos/pontos-de-ancoragem/'])}
-      ${card('escudo', 'Dono presente', 'O responsável acompanha as operações no dia a dia e mantém comunicação com o síndico durante a obra.')}</div>`) +
+      ${card('escudo', 'Dono presente', 'O responsável acompanha as operações no dia a dia e mantém comunicação com o síndico durante a obra.')}</div><p style="margin-top:var(--pf-space-5)">${link('Como contratar uma empresa de pintura predial: guia para síndicos', '/como-contratar-pintura-predial/')} · ${link('Para síndicos e administradoras', '/para-sindicos-e-administradoras/')}</p>`) +
     section(`<h2>Pinturas executadas em Blumenau</h2>${obrasPintura()}`, { subtle: true }),
   faq: [
     ['Quanto custa a pintura predial de um condomínio?', 'Não existe preço único por metro quadrado. O valor depende da área, da altura, do estado da superfície, do acesso e dos materiais. Por isso a Prediforma avalia a fachada para depois enviar uma proposta com escopo e valores.'],
@@ -70,7 +70,7 @@ SV['pintura-predial'] = {
 
 SV['lavacao-predial'] = {
   nome: 'Lavação predial', title: 'Lavação Predial em Blumenau | Prediforma Engenharia',
-  desc: 'Lavação e limpeza de fachadas de condomínios em Blumenau. Remoção de sujeira, fungos e poluição com equipamento adequado e equipes com NR-35. Peça orçamento.',
+  desc: 'Lavação predial para condomínios em Blumenau: remoção de sujeira, fungos e poluição da fachada, com equipamento adequado e equipes com NR-35. Peça orçamento.',
   h1: 'Lavação Predial em <span class="pf-hl">Blumenau</span> para Condomínios',
   lead: 'Remoção de sujeira, fungos e poluição de fachadas, com equipamento adequado e equipes treinadas para trabalho em altura.',
   msg: 'Olá! Gostaria de solicitar um orçamento de lavação predial para o nosso condomínio.', cta: 'Pedir orçamento de lavação', foto: 9,
@@ -100,9 +100,9 @@ SV['lavacao-predial'] = {
 };
 
 SV['pontos-de-ancoragem'] = {
-  nome: 'Pontos de ancoragem', title: 'Pontos de Ancoragem com Laudo em Blumenau | Prediforma',
-  desc: 'Fornecimento e instalação de pontos de ancoragem com laudo para trabalho em altura em condomínios de Blumenau. Equipes com NR-35. Peça seu orçamento.',
-  h1: 'Pontos de Ancoragem com Laudo para Trabalho em Altura em <span class="pf-hl">Blumenau</span>',
+  nome: 'Pontos de ancoragem', title: 'Ponto de Ancoragem com Laudo em Blumenau | Prediforma',
+  desc: 'Instalação de ponto de ancoragem com laudo para trabalho em altura em condomínios de Blumenau. Equipes com NR-35. Peça seu orçamento.',
+  h1: 'Ponto de Ancoragem com Laudo para Trabalho em Altura em <span class="pf-hl">Blumenau</span>',
   lead: 'Fornecimento e instalação de pontos de ancoragem para condomínios e edifícios, por uma empresa de engenharia com equipes treinadas em NR-35.',
   msg: 'Olá! Gostaria de solicitar um orçamento de pontos de ancoragem com laudo para o nosso condomínio.', cta: 'Pedir orçamento de ancoragem', foto: 4,
   corpo: () => section(split(
@@ -129,7 +129,7 @@ SV['pontos-de-ancoragem'] = {
 
 SV['manutencao-de-fachadas'] = {
   nome: 'Manutenção de fachadas', title: 'Manutenção de Fachadas em Blumenau | Prediforma Engenharia',
-  desc: 'Manutenção preventiva e corretiva de fachadas de condomínios em Blumenau, com engenheiro civil à frente e equipes com NR-35. Peça seu orçamento.',
+  desc: 'Manutenção de fachadas preventiva e corretiva para condomínios em Blumenau, com engenheiro civil à frente e equipes com NR-35. Peça seu orçamento.',
   h1: 'Manutenção de Fachadas em <span class="pf-hl">Blumenau</span>: Preventiva e Corretiva',
   lead: 'Conservação de fachadas de condomínios residenciais e comerciais, por uma empresa de engenharia com acompanhamento de perto da obra.',
   msg: 'Olá! Gostaria de solicitar um orçamento de manutenção de fachada para o nosso condomínio.', cta: 'Pedir avaliação da fachada', foto: 5,
@@ -195,14 +195,14 @@ SV['teste-de-percussao'] = {
 };
 
 SV['revitalizacao-e-retrofit-de-fachadas'] = {
-  nome: 'Revitalização e retrofit', title: 'Revitalização e Retrofit de Fachadas em Blumenau | Prediforma',
-  desc: 'Revitalização e retrofit de fachadas de condomínios em Blumenau: recuperação, proteção e renovação, com engenheiro civil à frente. Peça orçamento.',
-  h1: 'Revitalização e Retrofit de Fachadas em <span class="pf-hl">Blumenau</span>',
+  nome: 'Revitalização e retrofit', title: 'Revitalização de Fachadas e Retrofit em Blumenau | Prediforma',
+  desc: 'Revitalização de fachadas e retrofit para condomínios em Blumenau: recuperação, proteção e renovação, com engenheiro civil à frente. Peça orçamento.',
+  h1: 'Revitalização de Fachadas e Retrofit em <span class="pf-hl">Blumenau</span>',
   lead: 'Recuperação, proteção e renovação da fachada do condomínio, com avaliação técnica e acompanhamento da obra.',
   msg: 'Olá! Gostaria de solicitar um orçamento de revitalização de fachada para o nosso condomínio.', cta: 'Pedir orçamento de revitalização', foto: 8,
   corpo: () => section(split(
     `${modules}<h2>Quando a fachada precisa de mais do que pintura</h2>
-    <p class="pf-measure">Quando o prédio reúne desgaste, trincas, manchas e revestimento comprometido, a solução costuma ser um projeto de revitalização: recuperar a superfície, tratar os problemas e renovar o acabamento, em etapas.</p>
+    <p class="pf-measure">Quando o prédio reúne desgaste, trincas, manchas e revestimento comprometido, a solução costuma ser um projeto de revitalização de fachadas: recuperar a superfície, tratar os problemas e renovar o acabamento, em etapas.</p>
     <p class="pf-measure">A Prediforma não realiza ampliação nem construção: trabalha com a conservação e a renovação de fachadas existentes.</p>
     ${prov('<p class="pf-measure">Definição de retrofit e escopo da revitalização: a validar com o Jefferson.</p>')}`,
     callout('Serviços que costumam compor a obra', `<ul><li>${link('Teste de percussão', '/servicos/teste-de-percussao/')}</li><li>${link('Reparo de trincas, fissuras e vedações', '/servicos/reparo-de-trincas-e-fissuras/')}</li><li>${link('Lavação', '/servicos/lavacao-predial/')}</li><li>${link('Pintura', '/servicos/pintura-predial/')}</li></ul>`))) +
@@ -215,9 +215,9 @@ SV['revitalizacao-e-retrofit-de-fachadas'] = {
 };
 
 SV['pintura-industrial'] = {
-  nome: 'Pintura e lavação industrial', title: 'Pintura e Lavação Industrial em Blumenau | Prediforma',
+  nome: 'Pintura e lavação industrial', title: 'Pintura Industrial e Lavação Industrial | Prediforma', noindex: true,
   desc: 'Pintura industrial e lavação industrial em Blumenau e região, com equipes treinadas em NR-35. Peça seu orçamento.',
-  h1: 'Pintura e Lavação Industrial em Blumenau e Região',
+  h1: 'Pintura Industrial e Lavação Industrial em Blumenau e Região',
   lead: 'Pintura e lavação de estruturas industriais, com equipes treinadas para trabalho em altura.',
   msg: 'Olá! Gostaria de solicitar um orçamento de pintura/lavação industrial.', cta: 'Pedir orçamento industrial', foto: null,
   corpo: () => section(split(
@@ -238,7 +238,7 @@ function paginaServico(slug) {
     d.corpo() +
     section(split(`<h2>Perguntas frequentes</h2>${faq(d.faq)}`, `<h2>Serviços relacionados</h2>${rel}`)) +
     ctaFinal('Vamos avaliar a fachada do seu condomínio?', 'Conte pelo WhatsApp o que o prédio precisa. A Prediforma indica o serviço adequado e envia uma proposta clara, pronta para apresentar em assembleia.', d.cta, d.msg);
-  return { path: url, title: d.title, desc: d.desc, atual: '/servicos/', trail, body, ld: [ldServico(d.nome, d.desc, url), ldFaq(d.faq)], og: true };
+  return { path: url, title: d.title, desc: d.desc, noindex: d.noindex, atual: '/servicos/', trail, body, ld: [ldServico(d.nome, d.desc, url), ldFaq(d.faq)], og: true };
 }
 
 // ============================ HUB DE SERVIÇOS ============================
@@ -286,8 +286,8 @@ function paginaHome() {
       <p class="pf-micro" style="margin-top:var(--pf-space-4)">Garantia de 2 a 5 anos, conforme o serviço. O prazo e a cobertura constam na proposta.</p>`) +
     (MODO_PROC(blocoProcesso('Do primeiro contato à entrega da obra'))) +
     section(`<h2>Veja o trabalho antes de decidir</h2>${obrasPintura()}`, { subtle: true }) +
-    band(`<div class="pf-bars" aria-hidden="true"><i style="height:16px"></i><i style="height:28px"></i><i style="height:40px"></i><i style="height:48px"></i></div><h2>Feito para quem decide a manutenção do prédio</h2><p>Escopo claro, garantia por escrito, responsável técnico identificado e comunicação durante a obra.</p>${btnLink('Ver página para síndicos e administradoras', '/para-sindicos-e-administradoras/', { inverse: true })}`) +
-    section(split(`<h2>Blumenau e região</h2>${chipsStatic(SITE.cidades)}<p class="pf-micro" style="margin-top:var(--pf-space-3)">Atendimento de segunda a sexta, das 7h às 17h.</p><p>${link('Ver áreas atendidas', '/areas-atendidas/')}</p>`, `<h2>Perguntas frequentes</h2>${faq(FAQH)}`), { subtle: true }) +
+    band(`<div class="pf-bars" aria-hidden="true"><i style="height:16px"></i><i style="height:28px"></i><i style="height:40px"></i><i style="height:48px"></i></div><h2>Feito para quem decide a manutenção do prédio</h2><p>Escopo claro, garantia por escrito, responsável técnico identificado e comunicação durante a obra.</p><div class="pf-btns">${btnLink('Ver página para síndicos e administradoras', '/para-sindicos-e-administradoras/', { inverse: true })}<a class="pf-btn pf-btn--ghost-inverse" href="/como-contratar-pintura-predial/">Como contratar uma empresa de pintura predial</a></div>`) +
+    section(split(`<h2>Blumenau e região</h2>${chipsStatic(SITE.cidades)}<p class="pf-micro" style="margin-top:var(--pf-space-3)">Atendimento de segunda a sexta, das 7h às 17h.</p><p>${link('Ver áreas atendidas', '/areas-atendidas/')}</p>`, `<h2>Perguntas frequentes</h2>${faq(FAQH)}<p style="margin-top:var(--pf-space-4)">${link('Ver todas as perguntas frequentes', '/perguntas-frequentes/')}</p>`), { subtle: true }) +
     section(googleBlock()) +
     ctaFinal('Vamos olhar a fachada do seu condomínio?', 'Conte pelo WhatsApp o que o prédio precisa. A Prediforma indica o serviço adequado e envia uma proposta clara, pronta para apresentar em assembleia.', 'Pedir orçamento pelo WhatsApp', MSG_GERAL);
   return { path: '/', title: 'Pintura Predial e Fachadas em Blumenau | Prediforma Engenharia', desc: 'Pintura, lavação e manutenção de fachadas para condomínios em Blumenau. Engenheiro civil à frente e equipes com NR-35. Peça seu orçamento pelo WhatsApp.', atual: '', trail: null, body, ld: [L.ldNegocio(), ldFaq(FAQH)], og: true };
@@ -314,11 +314,11 @@ function paginaSindicos() {
       <article class="pf-card">${L.ICON.capacete}<h3>“E o transtorno na obra?”</h3><p>É a dúvida que mais pesa na rotina do síndico. O responsável acompanha as operações no dia a dia e mantém comunicação direta com o síndico durante a execução. Os clientes elogiam a organização das equipes e a educação dos profissionais.</p><p><strong>A Prediforma não promete obra sem incômodo.</strong> Obra incomoda. Promete organização, informação e alguém responsável por perto.</p></article></div>
       <p style="margin-top:var(--pf-space-5)">${btn('Pedir um orçamento para o meu condomínio', msg, 'tres-duvidas')}</p>`, { subtle: true }) +
     section(`<h2>O que você recebe na proposta</h2>${prov('<ul class="pf-measure"><li>O que será feito, em quais áreas e com quais materiais</li><li>Quem executa e quem responde tecnicamente pela obra</li><li>Prazo estimado e forma de comunicação durante a execução</li><li>Garantia por escrito</li><li>Valores e condições de pagamento</li></ul><p class="pf-micro">Conteúdo real da proposta: a confirmar com o Jefferson.</p>')}<p class="pf-measure">A proposta é feita para ser apresentada em assembleia, com escopo, prazo, garantia e valores no mesmo documento.</p>
-      <h2 style="margin-top:var(--pf-space-6)">Serviços para condomínios</h2><div class="pf-chips">${SERVICOS.map(([t, h]) => `<a class="pf-chip" href="${h}">${t}</a>`).join('')}</div><p class="pf-micro" style="margin-top:var(--pf-space-3)">Atende condomínios residenciais e comerciais. A Prediforma não realiza ampliação nem construção.</p>`) +
+      <h2 style="margin-top:var(--pf-space-6)">Serviços para condomínios</h2><div class="pf-chips">${SERVICOS.map(([t, h]) => `<a class="pf-chip" href="${h}">${t}</a>`).join('')}</div><p class="pf-micro" style="margin-top:var(--pf-space-3)">Atende condomínios residenciais e comerciais. A Prediforma não realiza ampliação nem construção.</p><p style="margin-top:var(--pf-space-4)">${link('Como contratar uma empresa de pintura predial', '/como-contratar-pintura-predial/')} · ${link('Conheça a Prediforma', '/sobre/')} · ${link('Ver obras', '/obras/')}</p>`) +
     band(`<h2>Para administradoras</h2><p>Você administra vários condomínios. A Prediforma atende administradoras com a mesma proposta clara e o mesmo acompanhamento da obra. Fale sobre a manutenção da sua carteira.</p>${btn('Falar sobre a minha carteira de condomínios', 'Olá! Sou da administradora e gostaria de falar sobre a manutenção de fachadas dos condomínios que administro.', 'administradoras', { inverse: true })}`) +
     section(split(`<h2>Veja o padrão de trabalho antes de levar à assembleia</h2>${obrasPintura()}`, `<h2>Perguntas frequentes do síndico</h2>${faq(FAQS)}`), { subtle: true }) +
     ctaFinal('Vamos avaliar a fachada do seu condomínio?', 'Conte pelo WhatsApp o que o prédio precisa. A Prediforma indica o serviço adequado e envia uma proposta clara, pronta para apresentar em assembleia.', 'Pedir orçamento pelo WhatsApp', msg);
-  return { path: '/para-sindicos-e-administradoras/', title: 'Manutenção de Fachadas para Condomínios | Prediforma', desc: 'Manutenção de fachadas para síndicos e administradoras em Blumenau. Proposta clara para assembleia, engenheiro civil à frente e acompanhamento da obra.', atual: '/para-sindicos', trail, body, ld: [ldFaq(FAQS)], og: true };
+  return { path: '/para-sindicos-e-administradoras/', title: 'Manutenção de Fachadas para Síndicos e Condomínios | Prediforma', desc: 'Manutenção de fachadas para síndicos e administradoras em Blumenau. Proposta clara para assembleia, engenheiro civil à frente e acompanhamento da obra.', atual: '/para-sindicos', trail, body, ld: [ldFaq(FAQS)], og: true };
 }
 
 // ============================ COMO CONTRATAR ============================
@@ -447,7 +447,7 @@ function paginaBlumenau() {
       ${prov('<p>Obra real em cada bairro, com foto e legenda: a pedir ao cliente. Conteúdo local sobre o clima e as fachadas: a validar com o Jefferson.</p>')}`) +
     section(`<h2>Obras</h2>${obrasPintura()}`, { subtle: true }) +
     ctaFinal('Vamos avaliar a fachada do seu condomínio em Blumenau?', 'Conte pelo WhatsApp o que o prédio precisa.', 'Pedir orçamento pelo WhatsApp', msg);
-  return { path: '/areas-atendidas/blumenau/', title: 'Pintura Predial e Fachadas em Blumenau | Prediforma', desc: 'Pintura predial, lavação e manutenção de fachadas em Blumenau, nos bairros Vila Nova, Victor Konder, Itoupava Seca, Centro e Ponta Aguda.', atual: '/areas', trail, body, ld: [], og: true };
+  return { path: '/areas-atendidas/blumenau/', title: 'Fachadas em Blumenau: Bairros Atendidos | Prediforma', desc: 'Pintura predial, lavação e manutenção de fachadas em Blumenau, nos bairros Vila Nova, Victor Konder, Itoupava Seca, Centro e Ponta Aguda.', noindex: true, atual: '/areas', trail, body, ld: [], og: true };
 }
 
 // ============================ FAQ ============================
@@ -464,7 +464,7 @@ function paginaFaq() {
   const body = L.breadcrumb(trail) + hero({ sec: null, h1: 'Perguntas frequentes de síndicos e administradoras', lead: 'Respostas às principais dúvidas sobre pintura, lavação e manutenção de fachadas.', msg: 'Olá! Li as perguntas frequentes e gostaria de tirar uma dúvida.', ctaTxt: 'Tirar uma dúvida no WhatsApp' }) +
     section(grupos.map(([t, i]) => `<h2 style="margin-top:var(--pf-space-6)">${t}</h2>${faq(i)}`).join('')) +
     ctaFinal('Ficou com alguma dúvida?', 'Pergunte pelo WhatsApp.', 'Pedir orçamento pelo WhatsApp', MSG_GERAL);
-  return { path: '/perguntas-frequentes/', title: 'Perguntas Frequentes | Prediforma Engenharia', desc: 'Respostas às principais dúvidas de síndicos e administradoras sobre pintura, lavação e manutenção de fachadas em Blumenau e região.', atual: '/perguntas', trail, body, ld: [ldFaq(todas)], og: true };
+  return { path: '/perguntas-frequentes/', title: 'Perguntas Frequentes | Prediforma Engenharia', noindex: true, desc: 'Respostas às principais dúvidas de síndicos e administradoras sobre pintura, lavação e manutenção de fachadas em Blumenau e região.', atual: '/perguntas', trail, body, ld: [ldFaq(todas)], og: true };
 }
 
 // ============================ PRIVACIDADE ============================
@@ -481,7 +481,7 @@ function paginaPrivacidade() {
   <h2>Para que usamos as informações</h2><p>Para responder pedidos de orçamento, atender clientes e cumprir obrigações legais. Não vendemos dados.</p>
   <h2>Seus direitos</h2><p>Você pode pedir acesso, correção ou exclusão das informações que enviou à Prediforma, pelo WhatsApp acima.</p>
   <h2>Atualizações</h2><p>Esta política pode mudar. A versão vigente fica sempre nesta página.</p></div>`;
-  return { path: '/politica-de-privacidade/', title: 'Política de Privacidade | Prediforma Engenharia', desc: 'Como o site da Prediforma Engenharia trata dados pessoais.', atual: '', trail, body, ld: [], og: false };
+  return { path: '/politica-de-privacidade/', title: 'Política de Privacidade | Prediforma Engenharia', noindex: true, desc: 'Como o site da Prediforma Engenharia trata dados pessoais.', atual: '', trail, body, ld: [], og: false };
 }
 
 const PAGINAS = () => [

@@ -68,7 +68,7 @@ function img(n, o = {}) {
   const k = String(n).padStart(2, '0');
   const m = IMGS[n];
   const sizes = o.sizes || '(max-width: 880px) 100vw, 560px';
-  const eager = o.eager ? '' : ' loading="lazy"';
+  const eager = o.eager ? ' fetchpriority="high"' : ' loading="lazy"';
   const style = o.pos ? ` style="object-position:${o.pos}"` : '';
   return `<img src="/img/obra-${k}-1200.webp" srcset="/img/obra-${k}-640.webp 640w, /img/obra-${k}-1200.webp 1200w" sizes="${sizes}" width="${m.w}" height="${m.h}" alt="${esc(o.alt)}"${eager} decoding="async"${style}${o.cls ? ` class="${o.cls}"` : ''}>`;
 }
@@ -201,7 +201,7 @@ const ldNegocio = () => ({
   description: 'Manutenção predial especializada em fachadas: pintura predial, lavação, pontos de ancoragem com laudo, reparo de trincas e teste de percussão, para condomínios em Blumenau e região.',
   areaServed: SITE.cidades.map((c) => ({ '@type': 'City', name: c, containedInPlace: { '@type': 'State', name: 'Santa Catarina' } })),
   openingHoursSpecification: [{ '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '17:00' }],
-  sameAs: [SITE.instagram],
+  sameAs: [SITE.instagram, SITE.maps],
   foundingDate: '2023-04-12',
 });
 const ldServico = (nome, desc, url) => ({
