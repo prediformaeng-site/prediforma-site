@@ -1,0 +1,17 @@
+{
+  "name": "prediforma-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site SEO Local da Prediforma Engenharia (estático, para Cloudflare Pages)",
+  "scripts": {
+    "imagens": "node src/imagens.js",
+    "fontes": "node src/fontes.js",
+    "build": "node src/build.js",
+    "build:revisao": "node src/build.js --revisao",
+    "build:live": "node src/build.js --live"
+  },
+  "devDependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/montserrat": "^5.3.0"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+# o site é gerado pelo build; só as imagens e as fontes (geradas localmente) entram no repositório
+public/*
+!public/img/
+!public/fonts/
+.DS_Store
+Thumbs.db
