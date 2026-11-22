@@ -39,7 +39,11 @@ Site/
 
 Atualizar texto: editar `src/paginas.js` (ou `src/lib.js` para dados da empresa), rodar `npm run build`. Atualizar o visual: mudar `tokens.json` no design system, rodar `node build-tokens.js` lá, copiar `tokens.css` e `componentes.css` para `src/vendor/`.
 
-## 3. Publicar no Cloudflare Pages
+## 3. Publicar na Cloudflare (Workers com arquivos estáticos)
+
+> **Como está configurado hoje:** o projeto `prediforma-site` foi criado no painel como **Worker** conectado ao GitHub. O arquivo `wrangler.jsonc` diz à Cloudflare para publicar a pasta `public/`. Configuração do build no painel: **Comando de build** `npm run build` · **Comando de implantação** `npx wrangler deploy` · variável `NODE_VERSION` = `20`. O endereço é `prediforma-site.<subdomínio-da-conta>.workers.dev`. Os arquivos `_headers` e `_redirects` funcionam do mesmo jeito.
+
+### (Alternativa antiga, Pages)
 
 > **Publicar é uma ação externa.** Nada foi enviado para o Cloudflare. Estes passos dependem da conta e da decisão da Paula.
 

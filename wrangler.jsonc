@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers com arquivos estáticos: publica a pasta public/ (gerada por `npm run build`).
+  // O nome precisa ser igual ao nome do projeto no painel da Cloudflare.
+  "name": "prediforma-site",
+  "compatibility_date": "2025-10-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
