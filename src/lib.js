@@ -92,10 +92,12 @@ const split = (a, b) => `<div class="pf-split"><div>${a}</div><div>${b}</div></d
 const band = (inner, o = {}) => `<div class="pf-band${o.cta ? ' pf-band--cta' : ''}"${o.id ? ` id="${o.id}"` : ''}><div class="pf-container">${inner}</div></div>`;
 const caption = (t) => `<p class="pf-caption">${t}</p>`;
 
-const ba = (a, b, leg, altA, altB) => `<div><div class="pf-ba" data-slider data-label="Antes e depois da fachada">
-  <figure>${img(a, { alt: altA, pos: '30% center', sizes: '(max-width: 880px) 50vw, 280px' })}<span class="pf-badge">Antes</span></figure>
-  <figure>${img(b, { alt: altB, pos: '30% center', sizes: '(max-width: 880px) 50vw, 280px' })}<span class="pf-badge">Depois</span></figure>
-  <span class="pf-ba__handle" aria-hidden="true">⇆</span>
+const BA_POS = { 7: '50% 30%', 8: '18% 50%' }; // enquadramento de cada foto, para o prédio aparecer inteiro
+// Lado a lado (padrão): cada foto com o seu enquadramento. o.slider = comparador deslizante, só para pares com o MESMO enquadramento.
+const ba = (a, b, leg, altA, altB, o = {}) => `<div><div class="pf-ba${o.slider ? '' : ' pf-ba--lado'}"${o.slider ? ' data-slider data-label="Antes e depois da fachada"' : ''}>
+  <figure>${img(a, { alt: altA, pos: BA_POS[a] || 'center', sizes: '(max-width: 600px) 100vw, 280px' })}<span class="pf-badge">Antes</span></figure>
+  <figure>${img(b, { alt: altB, pos: BA_POS[b] || 'center', sizes: '(max-width: 600px) 100vw, 280px' })}<span class="pf-badge">Depois</span></figure>
+  ${o.slider ? '<span class="pf-ba__handle" aria-hidden="true">⇆</span>' : ''}
 </div>${caption(leg)}</div>`;
 
 const credentials = (extra) => `<div class="pf-container"><div class="pf-credentials">

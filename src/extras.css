@@ -95,3 +95,7 @@
 
 .pf-footer__credito a{text-decoration:underline;text-underline-offset:3px}
 .pf-footer__bottom .pf-footer__credito{flex-basis:100%;text-align:center;padding-top:var(--pf-space-3);margin-top:var(--pf-space-1);border-top:var(--pf-stroke-fino) solid rgba(169,176,184,.18)}
+
+/* antes e depois lado a lado: cada foto com seu próprio enquadramento */
+.pf-ba--lado{gap:var(--pf-stroke-medio);background:var(--pf-surface-page)}
+@media (max-width:600px){.pf-ba--lado{grid-template-columns:minmax(0,1fr)}.pf-ba--lado img{aspect-ratio:1/1}}
