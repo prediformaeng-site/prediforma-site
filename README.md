@@ -29,9 +29,10 @@ Site/
 
 | Comando | O que faz |
 |---|---|
-| `npm run build` | **Produção em preview.** Blocos `[CONFIRMAR]` ficam **fora**. `noindex` ligado |
+| `npm run build` | **GO-LIVE (desde 23/11/2026):** é o que o Cloudflare roda a cada envio. Indexável, `robots.txt` aberto, sitemap com as páginas indexáveis. Blocos `[CONFIRMAR]` ficam **fora** |
+| `npm run build:preview` | Versão de pré-visualização: `noindex` em tudo. Usar para testar localmente |
 | `npm run build:revisao` | Mostra os blocos provisórios com contorno tracejado e a etiqueta "PROVISÓRIO", para a Paula revisar o que falta. **Não publicar este** |
-| `npm run build:live` | **Go-live.** Remove o `noindex`, abre `robots.txt` e o `sitemap.xml`. Só depois da seção 5 |
+| `npm run build:live` | Igual ao `build` (nome antigo mantido) |
 | `npm run imagens` | Refaz as imagens (webp 1200 e 640 px, sem EXIF, nomes de condomínio desfocados). Precisa do `ffmpeg` |
 | `npm run fontes` | Recopia as fontes do `node_modules` |
 

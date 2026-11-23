@@ -6,7 +6,8 @@
   "scripts": {
     "imagens": "node src/imagens.js",
     "fontes": "node src/fontes.js",
-    "build": "node src/build.js",
+    "build": "node src/build.js --live",
+    "build:preview": "node src/build.js",
     "build:revisao": "node src/build.js --revisao",
     "build:live": "node src/build.js --live"
   },
